@@ -1582,3 +1582,15 @@ h2 .brand { color: var(--rose); font-size: 1.15em; line-height: .9; }
 @media (max-width: 860px) {
   .dcard__mosaic--5 { grid-auto-rows: clamp(110px, 32vw, 190px); }
 }
+
+/* ---------- Tarjeta horizontal (fila completa) ---------- */
+.dcard--row { grid-column: 1 / -1; flex-direction: row; }
+.dcard--row .dcard__img { flex: 1.4; aspect-ratio: auto; min-height: 320px; }
+.dcard--row .dcard__body { flex: 1; justify-content: center; padding: clamp(24px, 3vw, 44px); }
+.dcard--row h3 { font-size: clamp(1.5rem, 2.2vw, 2rem); }
+.dcard--row .dcard__body > p { font-size: 1rem; }
+.dcard--row .dcard__img img { height: 100%; }
+@media (max-width: 860px) {
+  .dcard--row { flex-direction: column; }
+  .dcard--row .dcard__img { flex: none; aspect-ratio: 16 / 10; min-height: 0; }
+}
