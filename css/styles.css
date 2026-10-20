@@ -1543,3 +1543,4 @@ h2 .brand { color: var(--rose); font-size: 1.15em; line-height: .9; }
 .tile__slides--6 img:nth-child(5) { animation-delay: 12s; }
 .tile__slides--6 img:nth-child(6) { animation-delay: 15s; }
 @keyframes tileslide6 { 0% { opacity: 0; } 3% { opacity: 1; } 16.6% { opacity: 1; } 20% { opacity: 0; } 100% { opacity: 0; } }
+.dcard__flavors { padding-left: 0; }
