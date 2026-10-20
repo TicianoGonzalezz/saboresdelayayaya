@@ -1520,3 +1520,17 @@ h2 .brand { color: var(--rose); font-size: 1.15em; line-height: .9; }
   .dcard--wide { flex-direction: column; }
   .dcard--wide .dcard__mosaic { flex: none; min-height: 0; aspect-ratio: 3 / 2; }
 }
+
+/* ---------- Cookies NY: fotos que se alternan ---------- */
+.tile__slides { position: absolute; inset: 0; z-index: -2; }
+.tile__slides img { opacity: 0; animation: tileslide 9s ease-in-out infinite; }
+.tile__slides img:nth-child(2) { animation-delay: 3s; }
+.tile__slides img:nth-child(3) { animation-delay: 6s; }
+@keyframes tileslide { 0% { opacity: 0; } 8% { opacity: 1; } 33% { opacity: 1; } 41% { opacity: 0; } 100% { opacity: 0; } }
+.tile__flavors { display: grid; gap: 5px; margin: .55em 0 0; padding: 0; list-style: none; }
+.tile__flavors li { font-size: .88rem; line-height: 1.3; opacity: .95; }
+.tile__flavors li::before { content: "•"; margin-right: .5em; color: var(--blush); }
+@media (prefers-reduced-motion: reduce) {
+  .tile__slides img { animation: none !important; }
+  .tile__slides img:first-child { opacity: 1; }
+}
