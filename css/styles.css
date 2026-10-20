@@ -1558,3 +1558,27 @@ h2 .brand { color: var(--rose); font-size: 1.15em; line-height: .9; }
 /* ---------- Budines: dos fotos lado a lado ---------- */
 .dcard__mosaic--2 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
 .dcard__mosaic--2 img:first-child { grid-row: auto; }
+
+/* ---------- Sin azucar ---------- */
+.sinazucar { background: linear-gradient(180deg, var(--cream) 0%, #E9EEE1 45%, var(--cream) 100%); }
+.dcard__badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 2;
+  padding: .4em .95em;
+  border-radius: 99px;
+  background: var(--leaf);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+}
+.dcard__img { position: relative; }
+.dcard__mosaic--5 { grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: none; grid-auto-rows: clamp(150px, 13vw, 190px); }
+.dcard__mosaic--5 img:first-child { grid-row: span 2; }
+@media (max-width: 860px) {
+  .dcard__mosaic--5 { grid-auto-rows: clamp(110px, 32vw, 190px); }
+}
