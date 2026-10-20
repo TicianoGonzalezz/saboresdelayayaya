@@ -1554,3 +1554,7 @@ h2 .brand { color: var(--rose); font-size: 1.15em; line-height: .9; }
   .dcard--wide .dcard__mosaic { aspect-ratio: auto; }
   .dcard__mosaic--wide { grid-auto-rows: clamp(100px, 30vw, 180px); }
 }
+
+/* ---------- Budines: dos fotos lado a lado ---------- */
+.dcard__mosaic--2 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+.dcard__mosaic--2 img:first-child { grid-row: auto; }
