@@ -1544,3 +1544,13 @@ h2 .brand { color: var(--rose); font-size: 1.15em; line-height: .9; }
 .tile__slides--6 img:nth-child(6) { animation-delay: 15s; }
 @keyframes tileslide6 { 0% { opacity: 0; } 3% { opacity: 1; } 16.6% { opacity: 1; } 20% { opacity: 0; } 100% { opacity: 0; } }
 .dcard__flavors { padding-left: 0; }
+
+/* ---------- Dulces temáticos: cuadrícula compacta de 9 fotos ---------- */
+.dcard__mosaic--wide { grid-template-rows: none; grid-auto-rows: clamp(150px, 13vw, 190px); }
+.dcard--wide .dcard__mosaic { min-height: 0; }
+.dcard--wide .dcard__body { justify-content: center; }
+.dcard--wide .dcard__opts { margin-top: 28px; }
+@media (max-width: 860px) {
+  .dcard--wide .dcard__mosaic { aspect-ratio: auto; }
+  .dcard__mosaic--wide { grid-auto-rows: clamp(100px, 30vw, 180px); }
+}
